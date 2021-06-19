@@ -27,10 +27,10 @@ Our network is tested on two datasets for street-view scene change detection.
 
 Start training with TANet on 'PCD' dataset.
 >The configurations for TANet
->- local-kernel-size:1, attn-stride:0, attn-padding:0, attn-groups:4.
->- local-kernel-size:3, attn-stride:0, attn-padding:1, attn-groups:4.
->- local-kernel-size:5, attn-stride:0, attn-padding:2, attn-groups:4.
->- local-kernel-size:7, attn-stride:0, attn-padding:3, attn-groups:4.
+>- local-kernel-size:1, attn-stride:1, attn-padding:0, attn-groups:4.
+>- local-kernel-size:3, attn-stride:1, attn-padding:1, attn-groups:4.
+>- local-kernel-size:5, attn-stride:1, attn-padding:2, attn-groups:4.
+>- local-kernel-size:7, attn-stride:1, attn-padding:3, attn-groups:4.
 
     python3 train.py --dataset pcd --datadir /path_to_dataset --checkpointdir /path_to_check_point_directory --max-epochs 100 --batch-size 16 --encoder-arch resnet18 --local-kernel-size 1
 
